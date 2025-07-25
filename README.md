@@ -19,7 +19,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind 
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **Deployment**: Vercel (recommended)
+- **Deployment**: GitHub Pages
 
 ## 📋 Sections
 
@@ -41,8 +41,8 @@ A modern, responsive portfolio website built with Next.js, TypeScript, Tailwind 
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd portfolio1
+git clone https://github.com/The-Ravi/portfolio.git
+cd portfolio
 ```
 
 2. Install dependencies:
@@ -111,7 +111,7 @@ The website features various animations:
 3. Navigate to "Pages" section
 4. Select "GitHub Actions" as the source
 5. The site will automatically deploy on every push to main branch
-6. Your site will be available at `https://yourusername.github.io/repository-name`
+6. Your site will be available at `https://The-Ravi.github.io/portfolio`
 
 ### Vercel (Recommended for advanced features)
 1. Push your code to GitHub
@@ -137,7 +137,7 @@ Contributions, issues, and feature requests are welcome!
 
 Ravi Mishra - [ravi.mishra@example.com](mailto:ravi.mishra@example.com)
 
-Project Link: [https://github.com/yourusername/portfolio](https://github.com/yourusername/portfolio)
+Project Link: [https://github.com/The-Ravi/portfolio](https://github.com/The-Ravi/portfolio)
 
 ---
 
