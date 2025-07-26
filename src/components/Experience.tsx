@@ -33,18 +33,18 @@ const Experience = () => {
       ]
     },
     {
-      title: "Software Engineer",
-      company: "Accenture",
-      logo: "/logos/accenture-logo.svg",
-      location: "Bangalore, India",
-      period: "2022 - Present",
-      description: "Leading development of enterprise-scale applications using Java Spring Boot and React. Architected microservices on AWS, implemented CI/CD pipelines, and mentored junior developers. Working on digital transformation projects for Fortune 500 clients.",
-      technologies: ["Java", "Spring Boot", "React", "AWS", "Docker", "Kubernetes", "Gen AI", "Microservices"],
+      title: "Software Developer",
+      company: "BlacknGreen",
+      logo: "/logos/blackngreen-logo.svg",
+      location: "Gurgaon, India",
+      period: "2020 - 2021",
+      description: "Worked on e-commerce and sustainability-focused applications. Developed features for green technology platforms and implemented data analytics solutions for environmental impact tracking.",
+      technologies: ["Java", "Spring MVC", "JavaScript", "React", "MySQL", "AWS EC2", "Docker"],
       achievements: [
-        "Led digital transformation projects for 3+ Fortune 500 clients",
-        "Reduced application load time by 40% through optimization",
-        "Implemented Gen AI solutions improving business efficiency by 30%",
-        "Mentored 8+ junior developers and conducted technical interviews"
+        "Developed e-commerce platform serving 50k+ active users",
+        "Built environmental impact tracking system",
+        "Implemented automated testing reducing bugs by 60%",
+        "Created RESTful APIs with comprehensive documentation"
       ]
     },
     {
@@ -63,21 +63,20 @@ const Experience = () => {
       ]
     },
     {
-      title: "Software Developer",
-      company: "BlacknGreen",
-      logo: "/logos/blackngreen-logo.svg",
-      location: "Gurgaon, India",
-      period: "2020 - 2021",
-      description: "Worked on e-commerce and sustainability-focused applications. Developed features for green technology platforms and implemented data analytics solutions for environmental impact tracking.",
-      technologies: ["Java", "Spring MVC", "JavaScript", "React", "MySQL", "AWS EC2", "Docker"],
+      title: "Software Engineer",
+      company: "Accenture",
+      logo: "/logos/accenture-logo.svg",
+      location: "Bangalore, India",
+      period: "2022 - Present",
+      description: "Leading development of enterprise-scale applications using Java Spring Boot and React. Architected microservices on AWS, implemented CI/CD pipelines, and mentored junior developers. Working on digital transformation projects for Fortune 500 clients.",
+      technologies: ["Java", "Spring Boot", "React", "AWS", "Docker", "Kubernetes", "Gen AI", "Microservices"],
       achievements: [
-        "Developed e-commerce platform serving 50k+ active users",
-        "Built environmental impact tracking system",
-        "Implemented automated testing reducing bugs by 60%",
-        "Created RESTful APIs with comprehensive documentation"
+        "Led digital transformation projects for 3+ Fortune 500 clients",
+        "Reduced application load time by 40% through optimization",
+        "Implemented Gen AI solutions improving business efficiency by 30%",
+        "Mentored 8+ junior developers and conducted technical interviews"
       ]
     }
-    
   ]
 
   const containerVariants = {
