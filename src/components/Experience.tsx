@@ -8,9 +8,24 @@ import Image from 'next/image'
 
 const Experience = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const experiences = [
+    {
+      title: "Full Stack Software Developer",
+      company: "Harman",
+      logo: "/logos/harman-logo.svg",
+      location: "Gurgaon, India",
+      period: "2025 - present",
+      description: "Started my professional journey in automotive software development. Worked on connected car solutions and infotainment systems. Gained experience in embedded systems and IoT technologies.",
+      technologies: ["Java", "C++", "JavaScript", "HTML/CSS", "MySQL", "Git", "Linux", "IoT"],
+      achievements: [
+        "Contributed to connected car infotainment systems",
+        "Developed IoT solutions for automotive applications",
+        "Successfully completed 25+ client projects",
+        "Learned agile development methodologies and automotive standards"
+      ]
+    },
     {
       title: "Software Engineer",
       company: "Accenture",
@@ -30,7 +45,7 @@ const Experience = () => {
       title: "Full Stack Developer - II",
       company: "Newee",
       logo: "/logos/newee-logo.svg",
-      location: "Banglore",
+      location: "Bangalore",
       period: "2021 - 2022",
       description: "Developed innovative fintech solutions using modern web technologies. Built scalable payment processing systems and implemented real-time analytics dashboards for financial data.",
       technologies: ["Java", "Spring Boot", "React", "Node.js", "PostgreSQL", "Redis", "AWS"],
@@ -45,7 +60,7 @@ const Experience = () => {
       title: "Software Developer",
       company: "BlacknGreen",
       logo: "/logos/blackngreen-logo.svg",
-      location: "GUrgaon, India",
+      location: "Gurgaon, India",
       period: "2020 - 2021",
       description: "Worked on e-commerce and sustainability-focused applications. Developed features for green technology platforms and implemented data analytics solutions for environmental impact tracking.",
       technologies: ["Java", "Spring MVC", "JavaScript", "React", "MySQL", "AWS EC2", "Docker"],
@@ -55,22 +70,8 @@ const Experience = () => {
         "Implemented automated testing reducing bugs by 60%",
         "Created RESTful APIs with comprehensive documentation"
       ]
-    },
-    {
-      title: "Full Stack Software Developer",
-      company: "Harman",
-      logo: "/logos/harman-logo.svg",
-      location: "Gurgaon, India",
-      period: "2018 - 2020",
-      description: "Started my professional journey in automotive software development. Worked on connected car solutions and infotainment systems. Gained experience in embedded systems and IoT technologies.",
-      technologies: ["Java", "C++", "JavaScript", "HTML/CSS", "MySQL", "Git", "Linux", "IoT"],
-      achievements: [
-        "Contributed to connected car infotainment systems",
-        "Developed IoT solutions for automotive applications",
-        "Successfully completed 25+ client projects",
-        "Learned agile development methodologies and automotive standards"
-      ]
     }
+    
   ]
 
   const containerVariants = {
@@ -96,7 +97,7 @@ const Experience = () => {
   }
 
   return (
-    <section id="experience" className="py-20 px-6">
+    <section id="experience" className="py-20 px-6 bg-black">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}
@@ -108,7 +109,7 @@ const Experience = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Professional <span className="gradient-text">Experience</span>
             </h2>
-            <div className="w-24 h-1 bg-white mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6"></div>
             <p className="text-gray-300 max-w-2xl mx-auto">
               6 years of professional experience building scalable applications and leading development teams
             </p>
@@ -116,7 +117,7 @@ const Experience = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-white"></div>
+            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-400 to-pink-400"></div>
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -128,15 +129,17 @@ const Experience = () => {
                   }`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-black z-10"></div>
+                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-4 border-black z-10"></div>
 
                   <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-16 md:ml-0`}>
                     <motion.div
                       whileHover={{ scale: 1.02, y: -5 }}
-                      className="bg-gray-900 border border-gray-700 rounded-2xl p-6 hover-lift"
+                      className="glass rounded-2xl p-6 hover-lift"
                     >
                       <div className="flex items-center mb-4">
-                        <Briefcase className="text-white mr-3" size={20} />
+                        <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-3">
+                          <Briefcase className="text-white" size={20} />
+                        </div>
                         <h3 className="text-xl font-bold text-white">
                           {exp.title}
                         </h3>
@@ -153,7 +156,8 @@ const Experience = () => {
                                 height={24}
                                 className="object-contain"
                                 onError={(e) => {
-                                  e.currentTarget.style.display = 'none';
+                                  const target = e.target as HTMLImageElement;
+                                  target.style.display = 'none';
                                 }}
                               />
                             </div>
@@ -183,7 +187,7 @@ const Experience = () => {
                         <ul className="text-gray-300 text-sm space-y-1">
                           {exp.achievements.map((achievement, i) => (
                             <li key={i} className="flex items-start">
-                              <span className="text-white mr-2">•</span>
+                              <span className="text-purple-400 mr-2">•</span>
                               {achievement}
                             </li>
                           ))}
@@ -194,7 +198,7 @@ const Experience = () => {
                         {exp.technologies.map((tech, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-white/10 text-white rounded-full text-xs border border-white/20"
+                            className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs border border-purple-500/30"
                           >
                             {tech}
                           </span>
@@ -208,21 +212,21 @@ const Experience = () => {
           </div>
 
           <motion.div variants={itemVariants} className="mt-16 text-center">
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl p-8 max-w-4xl mx-auto">
+            <div className="glass rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Career Highlights
               </h3>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">6+</div>
+                  <div className="text-3xl font-bold gradient-text mb-2">6+</div>
                   <div className="text-gray-300">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">50+</div>
+                  <div className="text-3xl font-bold gradient-text mb-2">50+</div>
                   <div className="text-gray-300">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">15+</div>
+                  <div className="text-3xl font-bold gradient-text mb-2">15+</div>
                   <div className="text-gray-300">Technologies Mastered</div>
                 </div>
               </div>
