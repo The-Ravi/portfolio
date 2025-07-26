@@ -67,7 +67,7 @@ const Experience = () => {
       company: "Accenture",
       logo: "/logos/accenture-logo.svg",
       location: "Bangalore, India",
-      period: "2022 - Present",
+      period: "2021 - 2022",
       description: "Leading development of enterprise-scale applications using Java Spring Boot and React. Architected microservices on AWS, implemented CI/CD pipelines, and mentored junior developers. Working on digital transformation projects for Fortune 500 clients.",
       technologies: ["Java", "Spring Boot", "React", "AWS", "Docker", "Kubernetes", "Gen AI", "Microservices"],
       achievements: [
