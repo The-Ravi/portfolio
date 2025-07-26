@@ -4,12 +4,17 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Code, Database, Cloud, Brain, User } from 'lucide-react'
-import Image from 'next/image'
 
 const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
   const [imageError, setImageError] = useState(false)
+  
+  // Helper function to get the correct image path for GitHub Pages
+  const getImagePath = (path: string) => {
+    // Next.js will handle the base path automatically with basePath config
+    return path
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -71,14 +76,12 @@ const About = () => {
     }
 
     return (
-      <Image
-        src="/images/RaviProfile.jpeg"  // ✅ Fixed: Using your actual filename
+      <img
+        src={getImagePath("/images/RaviProfile.jpeg")}
         alt="Ravi Mishra - Full Stack Developer"
-        fill
-        className="rounded-xl object-cover relative z-10"
-        priority
+        className="w-full h-full rounded-xl object-cover relative z-10"
         onError={() => setImageError(true)}
-        onLoadingComplete={() => setImageError(false)}
+        onLoad={() => setImageError(false)}
       />
     )
   }

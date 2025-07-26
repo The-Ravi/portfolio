@@ -4,11 +4,16 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Calendar, MapPin, Briefcase } from 'lucide-react'
-import Image from 'next/image'
 
 const Experience = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
+  
+  // Helper function to get the correct image path for GitHub Pages
+  const getImagePath = (path: string) => {
+    // Next.js will handle the base path automatically with basePath config
+    return path
+  }
 
   const experiences = [
     {
@@ -149,8 +154,8 @@ const Experience = () => {
                         <div className="flex items-center mb-2">
                           {exp.logo && (
                             <div className="w-8 h-8 mr-3 bg-white rounded-full p-1 flex items-center justify-center">
-                              <Image
-                                src={exp.logo}
+                              <img
+                                src={getImagePath(exp.logo)}
                                 alt={`${exp.company} logo`}
                                 width={24}
                                 height={24}
