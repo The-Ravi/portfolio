@@ -19,7 +19,7 @@ const Experience = () => {
   const experiences = [
     {
       title: "Full Stack Software Developer",
-      company: "Harman",
+      company: "Harman India (A Samsung Company)",
       logo: "/logos/harman-logo.svg",
       location: "Gurgaon, India",
       period: "2025 - present",
