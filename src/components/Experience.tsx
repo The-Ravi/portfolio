@@ -103,7 +103,7 @@ const Experience = () => {
   }
 
   return (
-    <section id="experience" className="py-20 px-6 bg-black">
+    <section id="experience" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}

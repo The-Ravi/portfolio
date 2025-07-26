@@ -7,7 +7,7 @@ import { ExternalLink, Github, Code, Database, Cloud } from 'lucide-react'
 
 const Projects = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   const projects = [
     {
@@ -125,7 +125,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-20 px-6 bg-black/20">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black/20">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           ref={ref}
@@ -133,17 +133,17 @@ const Projects = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
               Featured <span className="gradient-text">Projects</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6"></div>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-4 sm:mb-6"></div>
+            <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
               A showcase of my recent work demonstrating expertise across different technologies and domains
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -152,45 +152,45 @@ const Projects = () => {
                 className="glass rounded-2xl overflow-hidden hover-lift group"
               >
                 {/* Project Image */}
-                <div className="relative h-48 bg-gradient-to-br from-purple-600 to-pink-600 overflow-hidden">
+                <div className="relative h-40 sm:h-48 bg-gradient-to-br from-purple-600 to-pink-600 overflow-hidden">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      <Code className="text-white/80 mx-auto mb-2" size={48} />
-                      <span className="text-white/60 text-sm">{project.category}</span>
+                      <Code className="text-white/80 mx-auto mb-2" size={36} />
+                      <span className="text-white/60 text-xs sm:text-sm">{project.category}</span>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-black/30 text-white text-xs rounded-full">
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-1 bg-black/30 text-white text-xs rounded-full">
                       {project.category}
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <div className="p-3 sm:p-4 lg:p-6">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-300 text-xs sm:text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
 
-                  <div className="mb-4">
+                  <div className="mb-3 sm:mb-4">
                     <h4 className="text-white font-semibold mb-2 text-xs sm:text-sm">Key Features:</h4>
                     <ul className="text-gray-400 text-xs space-y-1">
-                      {project.features.slice(0, 3).map((feature, i) => (
+                      {project.features.slice(0, 2).map((feature, i) => (
                         <li key={i} className="flex items-start">
-                          <span className="text-purple-400 mr-2">•</span>
-                          {feature}
+                          <span className="text-purple-400 mr-2 flex-shrink-0">•</span>
+                          <span className="line-clamp-2">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.slice(0, 4).map((tech, i) => (
+                  <div className="mb-4 sm:mb-6">
+                    <div className="flex flex-wrap gap-1 sm:gap-2">
+                      {project.technologies.slice(0, 3).map((tech, i) => (
                         <span
                           key={i}
                           className="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs border border-purple-500/30"
@@ -198,16 +198,16 @@ const Projects = () => {
                           {tech}
                         </span>
                       ))}
-                      {project.technologies.length > 4 && (
+                      {project.technologies.length > 3 && (
                         <span className="px-2 py-1 bg-gray-600/20 text-gray-400 rounded text-xs">
-                          +{project.technologies.length - 4} more
+                          +{project.technologies.length - 3}
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
-                    <div className="flex space-x-3">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex justify-center space-x-3">
                       <motion.a
                         href={project.github}
                         target="_blank"
@@ -232,7 +232,7 @@ const Projects = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-3 sm:px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs sm:text-sm rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 w-full sm:w-auto"
+                      className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs sm:text-sm rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 w-full"
                     >
                       View Details
                     </motion.button>
@@ -242,9 +242,9 @@ const Projects = () => {
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="mt-16 text-center">
-            <div className="glass rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
+          <motion.div variants={itemVariants} className="mt-12 sm:mt-16 text-center">
+            <div className="glass rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
                 More Projects Coming Soon
               </h3>
               <p className="text-gray-300 mb-6">

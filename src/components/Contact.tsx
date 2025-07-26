@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser'
 const Contact = () => {
   const ref = useRef(null)
   const formRef = useRef<HTMLFormElement>(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
   
   const [formData, setFormData] = useState({
     name: '',
@@ -168,7 +168,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}
@@ -176,17 +176,17 @@ const Contact = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
               Get In <span className="gradient-text">Touch</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6"></div>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-4 sm:mb-6"></div>
+            <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
               I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Contact Information */}
             <motion.div variants={itemVariants}>
               <div className="glass rounded-2xl p-4 sm:p-6 lg:p-8">

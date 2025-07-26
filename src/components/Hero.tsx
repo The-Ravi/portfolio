@@ -27,42 +27,42 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="text-center z-10 px-6"
+        className="text-center z-10 px-4 sm:px-6 w-full max-w-6xl mx-auto"
       >
         <motion.div
           variants={itemVariants}
-          className="mb-8"
+          className="mb-6 sm:mb-8"
         >
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 20 }}
-            className="w-32 h-32 mx-auto mb-8 rounded-full bg-white p-1"
+            className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 sm:mb-8 rounded-full bg-white p-1"
           >
             <div className="w-full h-full rounded-full bg-black flex items-center justify-center">
-              <span className="text-4xl font-bold text-white">RM</span>
+              <span className="text-2xl sm:text-4xl font-bold text-white">RM</span>
             </div>
           </motion.div>
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
         >
           Hi, I'm{' '}
-          <span className="gradient-text">
+          <span className="gradient-text block sm:inline">
             Ravi Mishra
           </span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto px-4"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed"
         >
           Full Stack Developer with{' '}
           <span className="text-white font-semibold">6 years</span> of experience
@@ -71,29 +71,29 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 px-4"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12"
         >
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
+            className="px-2 py-1 sm:px-3 sm:py-2 bg-white/10 text-white rounded-full border border-white/20 text-xs sm:text-sm lg:text-base"
           >
-            Java & Spring Boot Expert
+            Java & Spring Boot
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
+            className="px-2 py-1 sm:px-3 sm:py-2 bg-white/10 text-white rounded-full border border-white/20 text-xs sm:text-sm lg:text-base"
           >
             React & Next.js
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
+            className="px-2 py-1 sm:px-3 sm:py-2 bg-white/10 text-white rounded-full border border-white/20 text-xs sm:text-sm lg:text-base"
           >
             AWS & Cloud
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
+            className="px-2 py-1 sm:px-3 sm:py-2 bg-white/10 text-white rounded-full border border-white/20 text-xs sm:text-sm lg:text-base"
           >
             Gen AI
           </motion.span>
@@ -101,13 +101,13 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12 px-4"
+          className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12"
         >
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 sm:px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 text-center"
+            className="px-6 sm:px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 text-center text-sm sm:text-base"
           >
             Get In Touch
           </motion.a>
@@ -115,7 +115,7 @@ const Hero = () => {
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 sm:px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300 text-center"
+            className="px-6 sm:px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300 text-center text-sm sm:text-base"
           >
             View Projects
           </motion.a>
