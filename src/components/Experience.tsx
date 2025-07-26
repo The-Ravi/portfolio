@@ -37,7 +37,7 @@ const Experience = () => {
       company: "BlacknGreen",
       logo: "/logos/blackngreen-logo.svg",
       location: "Gurgaon, India",
-      period: "2020 - 2021",
+      period: "2022 - 2024",
       description: "Worked on e-commerce and sustainability-focused applications. Developed features for green technology platforms and implemented data analytics solutions for environmental impact tracking.",
       technologies: ["Java", "Spring MVC", "JavaScript", "React", "MySQL", "AWS EC2", "Docker"],
       achievements: [
