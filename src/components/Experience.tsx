@@ -122,9 +122,9 @@ const Experience = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-400 to-pink-400"></div>
+            <div className="absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-400 to-pink-400"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}
@@ -134,18 +134,18 @@ const Experience = () => {
                   }`}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-4 border-black z-10"></div>
+                  <div className="absolute left-6 sm:left-8 md:left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 sm:border-4 border-black z-10"></div>
 
-                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-16 md:ml-0`}>
+                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 lg:pr-12' : 'md:pl-8 lg:pl-12'} ml-12 sm:ml-16 md:ml-0`}>
                     <motion.div
                       whileHover={{ scale: 1.02, y: -5 }}
-                      className="glass rounded-2xl p-6 hover-lift"
+                      className="glass rounded-2xl p-4 sm:p-6 hover-lift"
                     >
                       <div className="flex items-center mb-4">
                         <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-3">
-                          <Briefcase className="text-white" size={20} />
+                          <Briefcase className="text-white" size={16} />
                         </div>
-                        <h3 className="text-xl font-bold text-white">
+                        <h3 className="text-lg sm:text-xl font-bold text-white">
                           {exp.title}
                         </h3>
                       </div>
@@ -153,12 +153,12 @@ const Experience = () => {
                       <div className="mb-4">
                         <div className="flex items-center mb-2">
                           {exp.logo && (
-                            <div className="w-8 h-8 mr-3 bg-white rounded-full p-1 flex items-center justify-center">
+                            <div className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 bg-white rounded-full p-1 flex items-center justify-center">
                               <img
                                 src={getImagePath(exp.logo)}
                                 alt={`${exp.company} logo`}
-                                width={24}
-                                height={24}
+                                width={20}
+                                height={20}
                                 className="object-contain"
                                 onError={(e) => {
                                   const target = e.target as HTMLImageElement;
@@ -167,29 +167,29 @@ const Experience = () => {
                               />
                             </div>
                           )}
-                          <h4 className="text-lg font-semibold text-white">
+                          <h4 className="text-base sm:text-lg font-semibold text-white">
                             {exp.company}
                           </h4>
                         </div>
-                        <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-gray-400 text-xs sm:text-sm">
                           <div className="flex items-center">
-                            <Calendar size={16} className="mr-1" />
+                            <Calendar size={14} className="mr-1" />
                             {exp.period}
                           </div>
                           <div className="flex items-center">
-                            <MapPin size={16} className="mr-1" />
+                            <MapPin size={14} className="mr-1" />
                             {exp.location}
                           </div>
                         </div>
                       </div>
 
-                      <p className="text-gray-300 mb-4 leading-relaxed">
+                      <p className="text-gray-300 mb-4 leading-relaxed text-sm sm:text-base">
                         {exp.description}
                       </p>
 
                       <div className="mb-4">
-                        <h5 className="text-white font-semibold mb-2">Key Achievements:</h5>
-                        <ul className="text-gray-300 text-sm space-y-1">
+                        <h5 className="text-white font-semibold mb-2 text-sm sm:text-base">Key Achievements:</h5>
+                        <ul className="text-gray-300 text-xs sm:text-sm space-y-1">
                           {exp.achievements.map((achievement, i) => (
                             <li key={i} className="flex items-start">
                               <span className="text-purple-400 mr-2">•</span>
@@ -199,11 +199,11 @@ const Experience = () => {
                         </ul>
                       </div>
 
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
                         {exp.technologies.map((tech, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs border border-purple-500/30"
+                            className="px-2 sm:px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs border border-purple-500/30"
                           >
                             {tech}
                           </span>

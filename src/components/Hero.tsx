@@ -52,7 +52,7 @@ const Hero = () => {
 
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold text-white mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
         >
           Hi, I'm{' '}
           <span className="gradient-text">
@@ -62,7 +62,7 @@ const Hero = () => {
 
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto px-4"
         >
           Full Stack Developer with{' '}
           <span className="text-white font-semibold">6 years</span> of experience
@@ -71,29 +71,29 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 px-4"
         >
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-white/10 text-white rounded-full border border-white/20"
+            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
           >
             Java & Spring Boot Expert
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-white/10 text-white rounded-full border border-white/20"
+            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
           >
             React & Next.js
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-white/10 text-white rounded-full border border-white/20"
+            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
           >
             AWS & Cloud
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="px-4 py-2 bg-white/10 text-white rounded-full border border-white/20"
+            className="px-3 py-2 sm:px-4 bg-white/10 text-white rounded-full border border-white/20 text-sm sm:text-base"
           >
             Gen AI
           </motion.span>
@@ -101,13 +101,13 @@ const Hero = () => {
 
         <motion.div
           variants={itemVariants}
-          className="flex justify-center space-x-6 mb-12"
+          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12 px-4"
         >
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-all duration-300"
+            className="px-6 sm:px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-all duration-300 text-center"
           >
             Get In Touch
           </motion.a>
@@ -115,7 +115,7 @@ const Hero = () => {
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
+            className="px-6 sm:px-8 py-3 border border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300 text-center"
           >
             View Projects
           </motion.a>

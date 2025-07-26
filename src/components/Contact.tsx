@@ -186,36 +186,36 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information */}
             <motion.div variants={itemVariants}>
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-8">
+              <div className="glass rounded-2xl p-4 sm:p-6 lg:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">
                   Let's Connect
                 </h3>
                 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                   {contactInfo.map((info, index) => (
                     <motion.a
                       key={index}
                       href={info.link}
                       whileHover={{ scale: 1.02, x: 5 }}
-                      className="flex items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 group"
+                      className="flex items-center p-3 sm:p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 group"
                     >
-                      <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-4 group-hover:scale-110 transition-transform">
-                        <info.icon className="text-white" size={24} />
+                      <div className="p-2 sm:p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-3 sm:mr-4 group-hover:scale-110 transition-transform">
+                        <info.icon className="text-white" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-white font-semibold">{info.title}</h4>
-                        <p className="text-gray-300">{info.value}</p>
+                        <h4 className="text-white font-semibold text-sm sm:text-base">{info.title}</h4>
+                        <p className="text-gray-300 text-sm sm:text-base">{info.value}</p>
                       </div>
                     </motion.a>
                   ))}
                 </div>
 
-                <div className="border-t border-gray-700 pt-8">
-                  <h4 className="text-white font-semibold mb-4">Follow Me</h4>
-                  <div className="flex space-x-4">
+                <div className="border-t border-gray-700 pt-6 sm:pt-8">
+                  <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Follow Me</h4>
+                  <div className="flex space-x-3 sm:space-x-4">
                     {socialLinks.map((social, index) => (
                       <motion.a
                         key={index}
@@ -224,24 +224,24 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.2, rotate: 5 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`p-3 bg-white/5 rounded-lg text-gray-400 ${social.color} transition-all duration-300 hover:bg-white/10`}
+                        className={`p-2 sm:p-3 bg-white/5 rounded-lg text-gray-400 ${social.color} transition-all duration-300 hover:bg-white/10`}
                       >
-                        <social.icon size={20} />
+                        <social.icon size={18} />
                       </motion.a>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30">
-                  <h4 className="text-white font-semibold mb-2">Available for</h4>
+                <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30">
+                  <h4 className="text-white font-semibold mb-2 text-sm sm:text-base">Available for</h4>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">
+                    <span className="px-2 sm:px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-xs sm:text-sm">
                       Full-time roles
                     </span>
-                    <span className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">
+                    <span className="px-2 sm:px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs sm:text-sm">
                       Freelance projects
                     </span>
-                    <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
+                    <span className="px-2 sm:px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-xs sm:text-sm">
                       Consulting
                     </span>
                   </div>
@@ -251,8 +251,8 @@ const Contact = () => {
 
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <div className="glass rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-8">
+              <div className="glass rounded-2xl p-4 sm:p-6 lg:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">
                   Send a Message
                 </h3>
                 
@@ -293,8 +293,8 @@ const Contact = () => {
                   </motion.div>
                 )}
                 
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                     <motion.div
                       whileFocus={{ scale: 1.02 }}
                       className="relative"

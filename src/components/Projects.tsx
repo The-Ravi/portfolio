@@ -143,7 +143,7 @@ const Projects = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -167,17 +167,17 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-300 text-xs sm:text-sm mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
                   <div className="mb-4">
-                    <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
+                    <h4 className="text-white font-semibold mb-2 text-xs sm:text-sm">Key Features:</h4>
                     <ul className="text-gray-400 text-xs space-y-1">
                       {project.features.slice(0, 3).map((feature, i) => (
                         <li key={i} className="flex items-start">
@@ -206,7 +206,7 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                     <div className="flex space-x-3">
                       <motion.a
                         href={project.github}
@@ -232,7 +232,7 @@ const Projects = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                      className="px-3 sm:px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs sm:text-sm rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 w-full sm:w-auto"
                     >
                       View Details
                     </motion.button>
