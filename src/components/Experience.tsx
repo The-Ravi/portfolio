@@ -11,8 +11,9 @@ const Experience = () => {
   
   // Helper function to get the correct image path for GitHub Pages
   const getImagePath = (path: string) => {
-    // Next.js will handle the base path automatically with basePath config
-    return path
+    // Add basePath for production deployment
+    const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+    return `${basePath}${path}`
   }
 
   const experiences = [
