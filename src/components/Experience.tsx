@@ -52,7 +52,7 @@ const Experience = () => {
       company: "Newee",
       logo: "/logos/newee-logo.svg",
       location: "Bangalore",
-      period: "2021 - 2022",
+      period: "2022 - 2022",
       description: "Developed innovative fintech solutions using modern web technologies. Built scalable payment processing systems and implemented real-time analytics dashboards for financial data.",
       technologies: ["Java", "Spring Boot", "React", "Node.js", "PostgreSQL", "Redis", "AWS"],
       achievements: [

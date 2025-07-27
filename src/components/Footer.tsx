@@ -89,7 +89,7 @@ const Footer = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0 flex items-center"
+              className="text-gray-400 text-sm mb-4 md:mb-0 flex items-center justify-center md:justify-start text-center md:text-left"
             >
               © {currentYear} Ravi Mishra. Made with{' '}
               <motion.span
