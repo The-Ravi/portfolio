@@ -11,34 +11,34 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Microservices Platform",
-      description: "A scalable e-commerce platform built with microservices architecture using Spring Boot, React, and AWS. Features include user management, product catalog, order processing, and payment integration.",
+      title: "Mastercraft Auto - Automotive Services Platform",
+      description: "A modern automotive services platform showcasing comprehensive car detailing, painting, and repair services. Features AI-powered color matching, service booking system, and a dynamic portfolio of automotive craftsmanship.",
       image: "/api/placeholder/600/400",
-      technologies: ["Java", "Spring Boot", "React", "AWS", "Docker", "Redis", "PostgreSQL"],
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Database"],
       features: [
-        "Microservices architecture with API Gateway",
-        "Real-time inventory management",
-        "Secure payment processing",
-        "Admin dashboard with analytics"
+        "AI-powered color matching system",
+        "Integrated booking and service management",
+        "Real-time OTP verification system",
+        "Dynamic service gallery and portfolio showcase"
       ],
-      github: "https://github.com",
-      live: "https://demo.com",
-      category: "Full Stack"
+      github: "https://www.mastercraftauto.co.in/",
+      live: "https://www.mastercraftauto.co.in/",
+      category: "Web Design"
     },
     {
-      title: "AI-Powered Content Management System",
-      description: "A modern CMS with AI-powered content generation and optimization features. Built with Next.js, Node.js, and integrated with OpenAI APIs for intelligent content suggestions.",
+      title: "Zenexora - AI-Driven Design & Brand Intelligence Lab",
+      description: "A strategic design agency that combines brand strategy, AI-powered design, and web development. Delivers integrated solutions for brand transformation, rapid prototyping, and market-leading brand positioning with data-driven insights.",
       image: "/api/placeholder/600/400",
-      technologies: ["Next.js", "Node.js", "OpenAI API", "MongoDB", "AWS Lambda", "TypeScript"],
+      technologies: ["React", "Framer", "Webflow", "TypeScript", "AI Design Tools", "Strategic Frameworks"],
       features: [
-        "AI content generation and optimization",
-        "Real-time collaborative editing",
-        "SEO optimization suggestions",
-        "Multi-language support"
+        "AI-powered design and rapid prototyping",
+        "Full-spectrum brand strategy and identity",
+        "Web design & development with AI-enhanced UI",
+        "Brand consistency and governance system"
       ],
-      github: "https://github.com",
-      live: "https://demo.com",
-      category: "AI/ML"
+      github: "https://www.zenexora.com/",
+      live: "https://www.zenexora.com/",
+      category: "Brand Design"
     },
     {
       title: "Real-Time Analytics Dashboard",
