@@ -14,7 +14,7 @@ const Projects = () => {
       title: "Mastercraft Auto - Automotive Services Platform",
       description: "A modern automotive services platform showcasing comprehensive car detailing, painting, and repair services. Features AI-powered color matching, service booking system, and a dynamic portfolio of automotive craftsmanship.",
       image: "/api/placeholder/600/400",
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Database"],
+      technologies: ["Java", "Spring Boot", "Next.js", "React", "TypeScript", "PostgreSQL"],
       features: [
         "AI-powered color matching system",
         "Integrated booking and service management",
@@ -23,7 +23,7 @@ const Projects = () => {
       ],
       github: "https://www.mastercraftauto.co.in/",
       live: "https://www.mastercraftauto.co.in/",
-      category: "Web Design"
+      category: "Full Stack"
     },
     {
       title: "Zenexora - AI-Driven Design & Brand Intelligence Lab",
