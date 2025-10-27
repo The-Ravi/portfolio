@@ -86,19 +86,19 @@ const Projects = () => {
       category: "Analytics"
     },
     {
-      title: "Blockchain Voting System",
-      description: "A secure and transparent voting system built on blockchain technology. Features include voter authentication, ballot encryption, and real-time result tracking with complete audit trails.",
+      title: "Coding Ada - Educational Platform",
+      description: "A comprehensive coding education platform offering courses in JavaScript, Python, Java, ReactJS, Machine Learning, and C/C++. Features one-on-one mentoring, hands-on challenges, and real-world project development.",
       image: "/api/placeholder/600/400",
-      technologies: ["Solidity", "Web3.js", "React", "Node.js", "IPFS", "MetaMask"],
+      technologies: ["Next.js", "React", "TypeScript", "Node.js", "Vercel", "Tailwind CSS"],
       features: [
-        "Blockchain-based security",
-        "Anonymous voting with verification",
-        "Real-time result tracking",
-        "Complete audit trail"
+        "One-on-one mentor interaction",
+        "Hands-on coding challenges",
+        "Real-world project development",
+        "Live analytics for progress tracking"
       ],
-      github: "https://github.com",
-      live: "https://demo.com",
-      category: "Blockchain"
+      github: "https://codingadaa-vishnusingh423.vercel.app/",
+      live: "https://codingadaa-vishnusingh423.vercel.app/",
+      category: "EdTech"
     }
   ]
 
