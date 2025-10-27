@@ -41,19 +41,19 @@ const Projects = () => {
       category: "Brand Design"
     },
     {
-      title: "Real-Time Analytics Dashboard",
-      description: "A comprehensive analytics dashboard for monitoring application performance and user behavior. Features real-time data visualization, custom metrics, and automated reporting.",
+      title: "Subscriptions Management Portal",
+      description: "A subscriptions management portal enabling plan creation, upgrades/downgrades, and user access control. Built with a Spring Boot + Java backend and a Next.js frontend for a seamless, modern UX.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "D3.js", "Node.js", "Kafka", "InfluxDB", "AWS EC2"],
+      technologies: ["Java", "Spring Boot", "Next.js", "React", "TypeScript"],
       features: [
-        "Real-time data streaming with Kafka",
-        "Interactive data visualizations",
-        "Custom dashboard builder",
-        "Automated alert system"
+        "Plan management with upgrades/downgrades",
+        "User subscription lifecycle and access control",
+        "Responsive Next.js UI with smooth interactions",
+        "API-driven backend built with Spring Boot"
       ],
-      github: "https://github.com",
-      live: "https://demo.com",
-      category: "Data Analytics"
+      github: "https://project.autocoder.cc/PROJ_cd944cfa/subscriptionsmanagementpage",
+      live: "https://project.autocoder.cc/PROJ_cd944cfa/subscriptionsmanagementpage",
+      category: "Full Stack"
     },
     {
       title: "Serverless Task Management API",
