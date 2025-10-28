@@ -76,6 +76,21 @@ const Experience = () => {
         "Implemented Gen AI solutions improving business efficiency by 30%",
         "Mentored 8+ junior developers and conducted technical interviews"
       ]
+    },
+    {
+      title: "Junior Software Engineer",
+      company: "Wroffy Technologies Pvt Ltd",
+      logo: "/logos/wroffy-logo.svg",
+      location: "Gurgaon, India",
+      period: "Jan 2019 - Jan 2020",
+      description: "Started my professional journey in software development. Worked on web applications and gained foundational experience in Java development, database management, and software engineering best practices.",
+      technologies: ["Java", "Spring MVC", "JavaScript", "HTML/CSS", "MySQL", "Git", "Eclipse"],
+      achievements: [
+        "Developed web applications using Java and Spring MVC",
+        "Gained hands-on experience with MySQL database management",
+        "Learned software development lifecycle and best practices",
+        "Contributed to multiple client projects and gained industry exposure"
+      ]
     }
   ]
 
@@ -116,7 +131,7 @@ const Experience = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6"></div>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              6 years of professional experience building scalable applications and leading development teams
+              7 years of professional experience building scalable applications and leading development teams
             </p>
           </motion.div>
 
@@ -223,7 +238,7 @@ const Experience = () => {
               </h3>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text mb-2">6+</div>
+                  <div className="text-3xl font-bold gradient-text mb-2">7+</div>
                   <div className="text-gray-300">Years Experience</div>
                 </div>
                 <div className="text-center">
